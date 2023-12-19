@@ -10,7 +10,10 @@
 <h6 class='title_post' style="font-weight: bold; text-align: center;">{{post.title}}</h6>
 <h6 style="text-align: right;">Publish_date:{{post.publication_date}}</h6>
 </div>
-<p>{{post.content}}</p>
+<div>
+<p>{{post.content | truncatewords:100 |safe}}</p>
+<a href='{% url 'detail' pk=post.pk %}' class='btn btn-primary' style="text-align: right;">Read More...</a>
+</div>
 <hr>
 {% endfor %}
 {%endblock%}

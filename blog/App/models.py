@@ -7,4 +7,7 @@ class Article(models.Model):
     
     def __str__(self):
         return self.title
- 
+   
+    def short_content(self):
+        return f'{self.content[:100]}......'
+  
