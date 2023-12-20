@@ -5,8 +5,12 @@
 {%block content %}
 
 
-<h1>{{post.title}}</h1>
-<p>{{post.content}}</p>
+    
+       <h1 style='position: fixed; top:15px;left:40%;'>{{post.title}}</h1>
+        <div class='scrollable' style='margin-top:125px; margin-left:40px;margin-right:40px;background-color:#white;'>
+                        <p>{{post.content}}</p>
+        </div>   
+   
 
 
 {%endblock%}

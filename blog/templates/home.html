@@ -4,16 +4,24 @@
 
 {%block content %}
 
-{%for post in posts %}
 
-<div style="background-color: #ffcc00; padding: 2px;">
-<h6 class='title_post' style="font-weight: bold; text-align: center;">{{post.title}}</h6>
-<h6 style="text-align: right;">Publish_date:{{post.publication_date}}</h6>
+<div style='margin-top:70px;' class='container'>
+    {%for post in posts %}
+    <div  class='row'>
+        <div style="background-color: #74AA9C; padding: 2px;">
+            <h6 class='title_post' style="font-weight: bold; text-align: center;" >
+                <a href='{% url 'detail' pk=post.pk %}' style='color: rgb(0,0,0);'>{{post.title}}</a>
+            </h6>
+            <h6 style="text-align: right;">Publish_date:{{post.publication_date}}</h6>
+        </div>
+        <div>
+            <p>{{post.content | truncatewords:100 |safe}}</p>
+            <a href='{% url 'detail' pk=post.pk %}' class='btn btn-primary' style="text-align: right;">Read More...</a>
+        </div>
+    </div>    
+    <hr>
+    
+   {% endfor %}
 </div>
-<div>
-<p>{{post.content | truncatewords:100 |safe}}</p>
-<a href='{% url 'detail' pk=post.pk %}' class='btn btn-primary' style="text-align: right;">Read More...</a>
-</div>
-<hr>
-{% endfor %}
+
 {%endblock%}

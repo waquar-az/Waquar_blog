@@ -17,3 +17,8 @@ footer {
     margin-top:18px;
     text-align: center;
 }
+.scrollable{
+    overflow-y:scroll;
+    height:420px;
+
+}
