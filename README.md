@@ -3,9 +3,9 @@
 This is django based blog. 
 Where admin can create and delete post. User can read the blog post and cant change anything. user can go detail by clicking on Read more.Or click on Title also.
 
-Let Folder-Nmae=Waquar_blog
+Let Folder-Name=Waquar_blog
 
-#git init,git status
+#git init,git --version
 
 #setup explian
 
@@ -35,19 +35,19 @@ cd blog
 
 {venv} Waquar_blog\blog>
 
-django-admin startapp App
+{venv} Waquar_blog\blog>django-admin startapp App
 
 #create model for databse
 
-py manage.py makemigrations
+{venv} Waquar_blog\blog> py manage.py makemigrations
 
-py manage.py migrate
+ {venv} Waquar_blog\blog> py manage.py migrate
 
 #createsuperuser
 
-py manage.py createsuperuser
+{venv} Waquar_blog\blog> py manage.py createsuperuser
 
-py manage.py runserver
+{venv} Waquar_blog\blog>py manage.py runserver
 
 #push code
 
