@@ -14,8 +14,13 @@ python -m venv venv
 
 Waquar_blog>cd venv
 
-Waquar_blog\env\Scripts\avtivate  OR scripts> Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned then 
+Waquar_blog\env\Scripts\avtivate  OR scripts> Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+
 .\activate
+
+#virtual environment  activited. {venv}
+
+{venv} Waquar _blog\venv\Scripts>
 
 #install django
 
@@ -23,11 +28,13 @@ pip install django
 
 cd..
 
+{venv} Waquar _blog>
+
 django-admin startproject blog
 
 cd blog
 
-Waquar_blog\blog>
+{venv} Waquar_blog\blog>
 
 django-admin startapp App
 
@@ -37,7 +44,7 @@ py manage.py makemigrations
 
 py manage.py migrate
 
-#create super user
+#createsuperuser
 
 py manage.py createsuperuser
 
