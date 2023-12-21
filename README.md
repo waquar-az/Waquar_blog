@@ -1,3 +1,6 @@
+
+#BLOG IS ON MASTER BRANCH 
+
 # Waquar_blog
 This is django based blog.
 Where admin can create and delete post.
